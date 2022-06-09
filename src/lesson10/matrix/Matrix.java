@@ -104,12 +104,12 @@ public class Matrix implements IMatrix {
 
     @Override
     public IMatrix mul(IMatrix otherMatrix) throws IllegalArgumentException, NullPointerException {
-        if (otherMatrix.getRows() != this.getRows()) {
+        if ( otherMatrix.getRows()!= this.getRows()) {
             System.out.println("Строки матриц не совпадают!!!");
             return null;
         }
 
-        if (otherMatrix.getColumns() != this.getColumns()) {
+        if ( otherMatrix.getColumns()!= this.getColumns()) {
             System.out.println("Колонки матриц не совпадают!!!");
             return null;
         }
@@ -117,12 +117,11 @@ public class Matrix implements IMatrix {
         Matrix result = new Matrix(this.getRows(), this.getColumns());
         for (int i = 0; i < result.getRows(); i++) {
             for (int j = 0; j < result.getColumns(); j++) {
-                for (int k = 0; k < result.getColumns(); k++) {
 
-                    result.setValueAt(i, j, this.getValueAt(i, k) * otherMatrix.getValueAt(k, j));
+                    result.setValueAt(i, j, this.getValueAt(i, j) * otherMatrix.getValueAt(i, j));
                 }
             }
-        }
+
 
         return result;
     }

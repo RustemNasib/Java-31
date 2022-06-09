@@ -44,55 +44,41 @@ public class Test implements CollectionUtils {
     public Test() {
     }
 
-    @Override
-        public String toString () {
-
-            return "Test{}";
-        }
-
-        @Override
-        public int hashCode () {
-            return super.hashCode();
-        }
-
-        @Override
+           @Override
         public Collection<Integer> union (Collection < Integer > a, Collection < Integer > b) throws
         NullPointerException {
 //            ArrayList<Integer> c = new ArrayList<>();
 //            c.addAll(a);
 //            c.addAll(b);
             a.addAll(b);
-            System.out.println("Объединение коллекций с дубликатами"+ a);
             return a;
         }
 
         @Override
         public Collection<Integer> intersection (Collection < Integer > a, Collection < Integer > b) throws
         NullPointerException {
-//            ArrayList<Integer> c = new ArrayList<>();
-//            c.retainAll(a);
-//            c.retainAll(b);
-        a.retainAll(b); // пересечение
-            a.addAll(a); // слияние
-            System.out.println("Пересечение коллекций с дубликатами"+ a);
-            return null;
+
+        a.retainAll(b); // РїРµСЂРµСЃРµС‡РµРЅРёt
+//        b.retainAll(a); // РїРµСЂРµСЃРµС‡РµРЅРёРµ
+//        a.addAll(b); // СЃР»РёСЏРЅРёРµ*/
+
+            return a;
         }
 
         @Override
         public Set<Integer> unionWithoutDuplicate (Collection < Integer > a, Collection < Integer > b) throws
         NullPointerException {
-            a.removeAll(b); // удаление дубликатов
-            a.addAll(b); // слияние
-            System.out.println("объединение коллекций без дубликатов"+ a);
+            a.removeAll(b); // СѓРґР°Р»РµРЅРёРµ РґСѓР±Р»РёРєР°С‚РѕРІ
+            a.addAll(b); // СЃР»РёСЏРЅРёРµ
 
-            return null;
+            return (Set<Integer>) a;
             }
 
         @Override
         public Set<Integer> intersectionWithoutDuplicate (Collection < Integer > a, Collection < Integer > b) throws
         NullPointerException {
-            a.retainAll(b); // пересечение
-            System.out.println("Пересечение коллекций без дубликатов"+ a);
+            a.retainAll(b); // РїРµСЂРµСЃРµС‡РµРЅРёРµ
+
 
             return null;
         }
@@ -100,13 +86,11 @@ public class Test implements CollectionUtils {
         @Override
         public Collection<Integer> difference (Collection < Integer > a, Collection < Integer > b) throws
         NullPointerException {
-            ArrayList<Integer> c = new ArrayList<>(a);
             a.removeAll(b);
-            b.removeAll(c);
+            b.removeAll(a);
             a.addAll(b);
-            System.out.println(a);
 
-            return null;
+            return a;
 
 
         }

@@ -23,11 +23,19 @@ public class Main {
 
 
 
-
-
-
         Test test = new Test();
         System.out.println(test.union(a,b));
+
+       System.out.println(test.intersection(a,b));
+
+
+        System.out.println(test.unionWithoutDuplicate(a,b));
+
+        System.out.println(test.intersectionWithoutDuplicate(a,b));
+
+        System.out.println(test.difference(a,b));
+
+
 
         //        texts.add("qqqq");
 //        texts.add("wwww");
