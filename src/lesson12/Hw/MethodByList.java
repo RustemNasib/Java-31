@@ -5,9 +5,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-import static java.util.Collections.list;
-
-public class MethodByImplements implements ListUtils{
+public class MethodByList implements ListUtils{
 
 
     @Override

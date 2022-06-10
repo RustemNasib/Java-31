@@ -2,8 +2,8 @@ package lesson12.Hw;
 
 import java.util.ArrayList;
 
-public class Main1 {
-    public Main1() {
+public class MainList1 {
+    public MainList1() {
     }
 
     public static void main(String[] args) {
@@ -14,8 +14,7 @@ public class Main1 {
         al.add(4.6);
 
 
-        MethodByImplements impl = new MethodByImplements();
+        MethodByList impl = new MethodByList();
         System.out.println(impl.sortedList(al));
-//        System.out.println( al);
     }
 }
