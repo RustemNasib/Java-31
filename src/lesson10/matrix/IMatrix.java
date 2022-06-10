@@ -90,7 +90,9 @@ public interface IMatrix {
 	 * @return произведение <b><i>(новый объект матрицы)</i></b>
 	 */
 	IMatrix mul1(double value);
-	
+
+	Matrix mul(double value);
+
 	/**
 	 * Возвращает транспонированную матрицу по отношению к текущей
 	 * 
