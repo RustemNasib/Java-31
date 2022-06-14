@@ -41,7 +41,7 @@ public class MainSet {
         c.add("6666");
 
         MethodBySet set = new MethodBySet();
-        System.out.println(set);
+        System.out.println(set.orderedSet(a,c));
 
 
         LinkedList<Integer> val = new LinkedList<>();
@@ -52,7 +52,7 @@ public class MainSet {
         int val0 = (2);
 
         MethodBySet set1 = new MethodBySet();
-        System.out.println(val);
+//        System.out.println(set1.customOrderSet();
     }
 
 

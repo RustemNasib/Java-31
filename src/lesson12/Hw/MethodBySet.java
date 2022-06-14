@@ -50,11 +50,10 @@ public class MethodBySet implements SetUtils {
         // объединение
         b.addAll(c);
 
-
-
-
         return null;
-    }
+        }
+
+
 
     @Override
     public Set<Integer> customOrderSet(int val1, int val2, int val3, int val4, int val5) {

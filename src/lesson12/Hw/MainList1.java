@@ -16,5 +16,8 @@ public class MainList1 {
 
         MethodByList impl = new MethodByList();
         System.out.println(impl.sortedList(al));
+
+//        List<Double> sorted = impl.sortedList (al);
+//        System.out.println(sorted);
     }
 }
