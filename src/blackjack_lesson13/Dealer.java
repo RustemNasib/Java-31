@@ -1,4 +1,4 @@
-package blackjack;
+package blackjack_lesson13;
 
 public class Dealer extends Player implements IDealer{
     @Override
