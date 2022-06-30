@@ -11,6 +11,7 @@ public class Main {
         table.put("Динамо", 12);
         table.put("ЦСКА", 20);
         table.put("Спартак", 15);
+        table.put("Зенит", 8);
 
         System.out.println(table);
 
@@ -26,3 +27,4 @@ public class Main {
         }
     }
 }
+
